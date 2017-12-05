@@ -1,0 +1,3 @@
+rootProject.name = 'RedditCloneReactNative'
+
+include ':app'
