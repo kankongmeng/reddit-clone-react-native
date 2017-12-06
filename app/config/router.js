@@ -2,7 +2,7 @@ import React from 'react';
 import { TabNavigator, StackNavigator } from 'react-navigation';
 import { Icon } from 'react-native-elements';
 import Search from '../containers/search';
-import PostForm from '../components/add-post';
+import PostForm from '../components/post-form';
 
 export const MainStack = StackNavigator({
   Search: {

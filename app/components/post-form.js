@@ -1,3 +1,5 @@
+'use strict';
+
 import React, { Component } from 'react';
 import { View, StyleSheet, Button, Alert, } from 'react-native';
 import PostPostsApi from '../api/post-posts-api';

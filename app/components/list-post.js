@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import Footer from './footer';
-import PostForm from './add-post';
+import PostForm from './post-form';
 import GetPostsApi from '../api/get-posts-api';
 
 // Maintain a list of topics posts
