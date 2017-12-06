@@ -1,7 +1,6 @@
 import React from 'react';
 import { TabNavigator, StackNavigator } from 'react-navigation';
 import { Icon } from 'react-native-elements';
-
 import Search from '../containers/search';
 import PostForm from '../components/add-post';
 
@@ -18,15 +17,13 @@ export const Tabs = TabNavigator({
   Search: {
     screen: MainStack,
     navigationOptions: {
-      tabBarLabel: 'Posts',
-      tabBarIcon: ({ tintColor }) => <Icon name="list" size={35} color={tintColor} />,
+      tabBarLabel: 'Home',
     },
   },
   PostForm: {
     screen: PostForm,
     navigationOptions: {
-      tabBarLabel: 'PostForm',
-      tabBarIcon: ({ tintColor }) => <Icon name="account-circle" size={35} color={tintColor} />
+      tabBarLabel: 'New Post',
     },
   },
 });
