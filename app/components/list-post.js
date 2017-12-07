@@ -12,8 +12,6 @@ import {
 } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import Footer from './footer';
-import PostForm from './post-form';
-import GetPostsApi from '../api/get-posts-api';
 
 // Maintain a list of topics posts
 export default class Posts extends Component {
@@ -26,22 +24,7 @@ export default class Posts extends Component {
       dataSource: ds.cloneWithRows([]),
     }
   }
-  
-  // Get all posts data from rest API
-  getPostData() {
-    GetPostsApi.getAllPost()
-      .then(function (data) {
-        this.setState({
-          dataSource: this.state.dataSource.cloneWithRows(data),
-          isLoading: false,
-        })
-      }.bind(this));  
-  }
-	
-  componentDidMount() {
-    this.getPostData();
-  }
-  
+
   // Perform update state when there is new value from Search container
   componentWillReceiveProps(nextProps) {
     if(nextProps.dataSource !== "undefined" && this.state.dataSource != nextProps.dataSource) {
